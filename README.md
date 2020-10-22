@@ -12,3 +12,15 @@ Permite configurar la cantidad de caracteres, el patrón de expresión regular a
 |slots|4|Define la cantidad de inputs|
 |pattern|[0-9]|RegEx utilizada para validar cada input|
 |onValueChange|`() => {}`|Función a la que se llama cuando se completa un input. Devuelve un objeto `{value: <codigo>, valid:<boolean>}`|
+
+## Ejemplos
+```
+const handleValueChange = code => {
+    console.log(`code: ${code.value} ${code.valid ? 'valid' : 'invalid'}`)
+}
+
+...
+
+<CodeInput onValueChange={handleValueChange} />
+<CodeInput slots={6} pattern={'[a-z0-9]'} onValueChange={handleValueChange} />
+```
