@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+import CodeInput from './components/CodeInput/';
+import { MainContainer } from './styles';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    const handleValueChange = value => {
+        console.log(`code: ${value.value} ${value.valid ? 'valid' : 'invalid'}`)
+    }
+
+    return (
+        <MainContainer>
+            <div>
+                <h2>Default (4 numeros)</h2>
+                <CodeInput onValueChange={handleValueChange} />
+            </div>
+            <div>
+                <h2>Custom props: 6 valores alfanuméricos</h2>
+                <CodeInput slots={6} pattern={'[a-z0-9]'} onValueChange={handleValueChange} />
+            </div>
+        </MainContainer>
+    );
 }
 
 export default App;
