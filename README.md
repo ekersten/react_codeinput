@@ -6,6 +6,9 @@
 Permite configurar la cantidad de caracteres, el patrón de expresión regular aceptado por cada input (default: `[0-9]`) y acepta una funcion a la que devuelve el código ingresado así como si es válido o no (valida si el largo del código es igual la cantidad de inputs)
 
 
+## Demo 🚀
+https://ekersten.github.io/react_codeinput/
+
 ## Props
 |Prop|Default|Descripción|
 |-|-|-|
