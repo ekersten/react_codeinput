@@ -5,8 +5,8 @@ import { MainContainer } from './styles';
 
 function App() {
 
-    const handleValueChange = value => {
-        console.log(`code: ${value.value} ${value.valid ? 'valid' : 'invalid'}`)
+    const handleValueChange = code => {
+        console.log(`code: ${code.value} ${code.valid ? 'valid' : 'invalid'}`)
     }
 
     return (

@@ -9,10 +9,8 @@ const CodeInput = (props) => {
     const slotRefs = useRef(Array(slots).fill(0).map(slot => createRef()));
 
     const setValue = (i, value) => {
-        console.log({ i, value });
         // limpio el valor basado en la regex
         const cleanValue = (value.match(props.pattern) || []).join('');
-        console.log(cleanValue);
         
         setValues((prev) => {
             const newValues = [...prev];
